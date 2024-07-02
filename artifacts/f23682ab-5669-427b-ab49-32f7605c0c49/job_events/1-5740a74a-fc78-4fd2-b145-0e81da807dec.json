@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "5740a74a-fc78-4fd2-b145-0e81da807dec", "counter": 1, "stdout": "\u001b[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "f23682ab-5669-427b-ab49-32f7605c0c49", "created": "2024-06-29T17:27:06.781779"}

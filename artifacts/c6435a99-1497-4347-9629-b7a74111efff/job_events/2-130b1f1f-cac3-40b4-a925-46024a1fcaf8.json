@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "130b1f1f-cac3-40b4-a925-46024a1fcaf8", "counter": 2, "stdout": "\u001b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\u001b[0m", "start_line": 1, "end_line": 2, "runner_ident": "c6435a99-1497-4347-9629-b7a74111efff", "created": "2024-07-02T20:56:11.968018"}

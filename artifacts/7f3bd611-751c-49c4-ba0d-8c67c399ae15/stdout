@@ -1,0 +1,23 @@
+[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available[0m
+[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that[0m
+[1;35mthe implicit localhost does not match 'all'[0m
+
+PLAY [Ensure xz versions 5.6.0 or 5.6.1 are not installed] *********************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [Include OS-specific variables] *******************************************
+[0;32mok: [localhost][0m
+
+TASK [Check if xz is installed] ************************************************
+[0;36mincluded: /home/ubuntu/PFG/app/ansibleAudit/ansibleAudit/roles/Ubuntu/tasks/check_packages_versions.yml for localhost[0m
+
+TASK [Gather package facts] ****************************************************
+[0;32mok: [localhost][0m
+
+TASK [Check package versions are versions vulnerable] **************************
+[0;36mskipping: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;32mlocalhost[0m                  : [0;32mok=4   [0m changed=0    unreachable=0    failed=0    [0;36mskipped=1   [0m rescued=0    ignored=0   

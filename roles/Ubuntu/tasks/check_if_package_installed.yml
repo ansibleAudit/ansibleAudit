@@ -1,0 +1,13 @@
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+- name: Gather package facts
+  ansible.builtin.package_facts:
+     manager: auto
+        
+- name: Check if package is installed
+  ansible.builtin.fail:
+    msg: "Package {{ package_name }} is installed. [Remediation] {{ remediation }}"
+  when: package_name in ansible_facts.packages

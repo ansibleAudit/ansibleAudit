@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "0aa413e3-892d-4c1a-bdc8-82fb917f2c53", "counter": 1, "stdout": "\u001b[0;31mERROR! the playbook: roles/common/tasks/common.yml could not be found\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "ff9a57ea-acdd-45fc-ba29-99b83a98a82a", "created": "2024-06-27T17:52:22.701217"}

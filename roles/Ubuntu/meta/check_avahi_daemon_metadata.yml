@@ -1,0 +1,25 @@
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+
+# Metadata of check_avahi_daemon.yml
+systems:
+  - name: "Ubuntu"
+    versions: ['24.04', '23.10', '22.04', '20.04']
+    
+description: "Avahi is a free implementation of Zeroconf networking, which enables devices on a     
+     local network to automatically discover and communicate with each other without  
+     requiring manual setup. It includes support for multicast DNS (mDNS) and DNS-
+     Based Service Discovery (DNS-SD), allowing devices to publish and discover services and  
+     hosts on the network seamlessly. With Avahi, users can easily find printers, files, 
+     people, and other network services available on their local network without the need 
+     for explicit configuration."
+     
+rationale: "Automatic discovery of network services is not normally required for system     
+     functionality. It is recommended to remove this package to reduce the potential attack  
+     surface."
+     
+cvss_score: 9.7
+  

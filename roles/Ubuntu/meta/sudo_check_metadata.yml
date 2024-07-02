@@ -1,0 +1,30 @@
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+
+# Metadata of sudo_check.yml
+systems:
+  - name: "Ubuntu"
+    versions: ['24.04', '23.10', '22.04', '20.04']
+  - name: "Fedora"
+    versions: ['40', '39', '38']
+  - name: "Kali"
+    versions: ['2024.2', '2023.3']
+    
+description: "sudo allows a permitted user to execute a command as the superuser or another user, as 
+     specified by the security policy. The invoking user's real (not effective) userID is used to determine
+     the user name with which to query the security policy."
+     
+rationale: "sudo supports a plugin architecture for security policies and input output
+     logging.Third parties can develop and distribute their own policy and I/O    
+     loggingplugins to work seamlessly with the sudo front end. The default security policy 
+     is sudoers, which is configured via the file /etc/sudoers.The security policy          
+     determines what privileges, if any, a user has to run sudo. The policy
+     may require that users authenticate themselves with a password or another   
+     authentication mechanism. If authentication is required, sudo will exit if the user's  
+     password is not entered within a configurable time limit. This limit is policy-
+     specific."
+     
+cvss_score: 7.5 

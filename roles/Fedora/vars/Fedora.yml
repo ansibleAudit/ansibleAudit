@@ -1,0 +1,15 @@
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+
+#Files
+
+
+#Packages
+
+
+# Commands
+update_packages_command: update_packages_dnf
+check_updates_command: check_updates_dnf

@@ -1,0 +1,18 @@
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+
+- name: Ensure sudo is installed
+  hosts: localhost
+  tasks:
+     - name: Include OS-specific variables
+       include_vars: "../../common/vars/global_vars.yml"
+          
+     - name: Check if sudo is installed
+       include_tasks: check_if_package_not_installed.yml
+       vars:
+          package_name: "{{ sudo_package }}"
+          remediation: apt install
+       register: package_check_result

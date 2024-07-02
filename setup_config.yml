@@ -1,0 +1,15 @@
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+
+- name: Install packages for app
+  hosts: localhost
+  
+  tasks:
+     - name: Install necessary packages
+       include_tasks: install_packages.yml
+     
+     - name: Setup the environment
+       include_tasks: setup_environment.yml

@@ -1,0 +1,15 @@
+namespace: ansibleAudit
+name: collection
+version: 1.0.0
+readme: README.md
+authors:
+- Marc Serrano <marcserrano2626@gmail.com>
+description: This collection includes roles that check if the system configuration
+license:
+- MIT
+tags: [ubuntu, security, compliance, automation, hardening, cis, vulnerability, ansible-role, ansible-collection]
+dependencies: {}
+repository: https://github.com/ansibleAudit/ansible-collection-ubuntu
+documentation: http://docs.example.com
+issues: https://github.com/ansibleAudit/ansible-collection-ubuntu/issues
+build_ignore: []

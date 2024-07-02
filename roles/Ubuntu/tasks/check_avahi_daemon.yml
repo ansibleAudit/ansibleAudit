@@ -1,0 +1,22 @@
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+
+- name: Ensure Avahi Server is not installed
+  hosts: localhost
+  vars:
+     remediation_commands:
+          - systemctl stop avahi-daemon.service
+          - systemctl stop avahi-daemon.socket
+          - apt purge avahi-daemon
+  tasks:     
+     - name: Include OS-specific variables
+       include_vars: "../vars/{{ ansible_facts.distribution }}.yml"
+       
+     - name: Check if avahi-daemon is not installed
+       include_tasks: check_if_package_installed.yml
+       vars:
+          package_name: "{{ avahi_daemon_package }}"
+          remediation: "{{ remediation_commands }}"         

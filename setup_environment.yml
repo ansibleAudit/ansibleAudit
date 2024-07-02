@@ -1,0 +1,21 @@
+---
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+
+- name: Create Python virtual environment
+  command: python -m venv .
+      
+- name: Activate virtual environment
+  command: source ./bin/activate
+   
+- name: Upgrade pip to the latest version
+  pip:
+     name: pip
+     state: latest
+- name: Install Ansible
+  pip:
+     name: ansible
+     state: present  

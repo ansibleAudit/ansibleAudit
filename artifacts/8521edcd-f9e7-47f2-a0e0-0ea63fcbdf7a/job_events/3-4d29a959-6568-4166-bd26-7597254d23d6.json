@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "4d29a959-6568-4166-bd26-7597254d23d6", "counter": 3, "stdout": "\u001b[1;35mthe implicit localhost does not match 'all'\u001b[0m", "start_line": 2, "end_line": 3, "runner_ident": "8521edcd-f9e7-47f2-a0e0-0ea63fcbdf7a", "created": "2024-06-27T20:44:45.235793"}

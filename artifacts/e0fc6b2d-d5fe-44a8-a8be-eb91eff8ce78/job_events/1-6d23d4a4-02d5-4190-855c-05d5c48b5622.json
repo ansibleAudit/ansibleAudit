@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "6d23d4a4-02d5-4190-855c-05d5c48b5622", "counter": 1, "stdout": "\u001b[0;31mERROR! the playbook: roles/Kali/tasks/Kali.yml could not be found\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "e0fc6b2d-d5fe-44a8-a8be-eb91eff8ce78", "created": "2024-06-27T17:52:21.660408"}

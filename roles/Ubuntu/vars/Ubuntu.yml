@@ -1,0 +1,17 @@
+---
+# Copyright (c) 2024 Marc Serrano
+#
+# This file is part of the terms of the GNU General Public License (GPL).
+# See https://www.gnu.org/licenses/gpl-3.0.html for more details.
+
+#Files
+
+
+#Packages
+avahi_daemon_package: avahi-daemon
+
+
+# Commands
+check_packages_updates: "apt list --upgradable"
+install_xz_command: "apt install xz-utils=5.4.6"
+install_liblzma_command: "apt install liblzma-dev=5.4.6"
