@@ -19,7 +19,7 @@
        include_vars: "../../common/vars/global_vars.yml"
           
      - name: Check current permissions and ownership of /etc/passwd
-       include_tasks: check_passwd_file.yml
+       include_tasks: ../../common/tasks/check_passwd_file.yml
        vars:
           passwd: "{{ passwd_file }}"
        register: passwd_stat

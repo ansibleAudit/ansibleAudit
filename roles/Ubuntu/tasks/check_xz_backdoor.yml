@@ -14,7 +14,7 @@
        include_vars: "../../common/vars/global_vars.yml"
      
      - name: Check if xz is installed
-       include_tasks: check_packages_versions.yml
+       include_tasks: ../../common/tasks/check_packages_versions.yml
        vars:
           package_name: "{{ xz_package }}"
           remediation: "{{ install_xz_command }}"

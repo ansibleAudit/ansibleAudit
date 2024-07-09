@@ -1,6 +1,7 @@
 import os
 import distro
 import yaml
+import shutil
 from modules.report_generator import generate_report
 from rich.console import Console
 from modules.generate_pdf_dashboards import create_pdf_with_dashboards
@@ -101,3 +102,6 @@ def run_playbooks(roles_dir):
                        generate_report(playbook_name, current_system, current_version, state, remediations, metadata_info)
     total_rules = ok_count + failed_count
     create_pdf_with_dashboards(ok_count, failed_count, total_rules, rating_counts )
+    artifacts_dir = os.path.join(os.getcwd(), 'artifacts')
+    if os.path.exists(artifacts_dir):
+       shutil.rmtree(artifacts_dir)

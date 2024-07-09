@@ -11,8 +11,8 @@
        include_vars: "../../common/vars/global_vars.yml"
           
      - name: Check if sudo is installed
-       include_tasks: ../../common/tasks/check_if_package_not_installed.yml
+       include_tasks: check_if_package_not_installed.yml
        vars:
           package_name: "{{ sudo_package }}"
-          remediation: apt install
+          remediation: dnf install
        register: package_check_result

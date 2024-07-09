@@ -16,7 +16,7 @@
        include_vars: "../vars/{{ ansible_facts.distribution }}.yml"
        
      - name: Check if avahi-daemon is not installed
-       include_tasks: check_if_package_installed.yml
+       include_tasks: ../../common/tasks/check_if_package_installed.yml
        vars:
           package_name: "{{ avahi_daemon_package }}"
           remediation: "{{ remediation_commands }}"         

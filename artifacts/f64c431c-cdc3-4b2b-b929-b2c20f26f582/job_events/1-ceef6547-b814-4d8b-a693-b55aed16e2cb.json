@@ -1,1 +1,0 @@
-{"event": "verbose", "uuid": "ceef6547-b814-4d8b-a693-b55aed16e2cb", "counter": 1, "stdout": "\u001b[0;31mERROR! the playbook: roles/Fedora/tasks/Fedora.yml could not be found\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "f64c431c-cdc3-4b2b-b929-b2c20f26f582", "created": "2024-06-27T17:52:22.219979"}
