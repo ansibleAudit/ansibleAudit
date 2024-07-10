@@ -48,6 +48,7 @@ def get_rating(score):
     else:
         return "Invalid score"
 
+
 def generate_report(playbook, system_name, system_version, state, remediations, metadata_info):
         description, rationale, cvss_score = metadata_info
         actual_path = os.getcwd()

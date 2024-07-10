@@ -14,7 +14,6 @@ def handle_results(results, playbook_name):
         tuple: A tuple containing a boolean indicating the success or failure of the execution, 
                the final status as a string ("OK" or "FAILED"), and a list of remedies.
     """
-
     state = "OK"
     remediations = []
     for event in results.events:

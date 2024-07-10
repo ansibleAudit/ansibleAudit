@@ -13,13 +13,13 @@ rating_types_counts = {
     
 def get_rating_types_counts(score):
     """
-    Función que clasifica un puntaje (score) y cuenta las ocurrencias de cada tipo de clasificación.
+    Function that classifies a score 
     
     Args:
-        score (float): El puntaje que se va a clasificar.
+        score (float): The score to be ranked.
 
     Returns:
-        dict: Un diccionario con el conteo actualizado para cada tipo de clasificación.
+        dict: A dictionary with the updated count for each type of classification.
     """
     if score == 0.0:
         rating_types_counts["None"] += 1
