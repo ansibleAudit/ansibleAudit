@@ -25,4 +25,4 @@ rationale: "sudo supports a plugin architecture for security policies and input 
      password is not entered within a configurable time limit. This limit is policy-
      specific."
      
-cvss_score:
+cvss_score: 5

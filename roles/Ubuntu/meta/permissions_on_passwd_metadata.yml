@@ -19,4 +19,4 @@ rationale: "It is critical to ensure that the /etc/passwd file is protected from
 access. Although it is protected by default, the file permissions could be changed either
 inadvertently or through malicious actions."
      
-cvss_score: 
+cvss_score: 5.0

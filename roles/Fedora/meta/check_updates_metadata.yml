@@ -6,8 +6,6 @@
 
 # Metadata of check_updates.yml
 systems:
-  - name: "Ubuntu"
-    versions: ['24.04', '23.10', '22.04', '20.04']
   - name: "Kali"
     versions: ['2024.2']
     
@@ -18,4 +16,4 @@ rationale: "Regularly updating system packages is critical for maintaining syste
 security and stability. By identifying and applying updates promptly, organizations
 can mitigate potential vulnerabilities and enhance overall system resilience."
      
-cvss_score: 
+cvss_score: 5.0

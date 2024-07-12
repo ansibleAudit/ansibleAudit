@@ -6,12 +6,8 @@
 
 # Metadata of sudo_check.yml
 systems:
-  - name: "Ubuntu"
-    versions: ['24.04', '23.10', '22.04', '20.04']
   - name: "Fedora"
     versions: ['40', '39', '38']
-  - name: "Kali"
-    versions: ['2024.2', '2023.3']
     
 description: "sudo allows a permitted user to execute a command as the superuser or another user, as 
      specified by the security policy. The invoking user's real (not effective) userID is used to determine
@@ -27,4 +23,4 @@ rationale: "sudo supports a plugin architecture for security policies and input 
      password is not entered within a configurable time limit. This limit is policy-
      specific."
      
-cvss_score: 
+cvss_score: 5
