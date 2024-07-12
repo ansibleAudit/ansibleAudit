@@ -21,5 +21,5 @@ rationale: "Automatic discovery of network services is not normally required for
      functionality. It is recommended to remove this package to reduce the potential attack  
      surface."
      
-cvss_score: 9.7
+cvss_score: 
   
