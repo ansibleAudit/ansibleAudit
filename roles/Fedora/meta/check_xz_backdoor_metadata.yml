@@ -6,8 +6,8 @@
 
 # Metadata of check_xz_version_backdoor.yml  
 systems:
-  - name: "Ubuntu"
-    versions: ['24.04', '23.10', '22.04', '20.04']
+  - name: "Fedora"
+    versions: ['40', '39', '38']
     
 description: "XZ Utils is a popular collection of data compression libraries and tools lossless compressors.
 XZ is the main program for compressing and decompressing files in the XZ format, and lblzma is a 
