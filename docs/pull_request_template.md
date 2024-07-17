@@ -11,10 +11,10 @@
 - If it's necessary, put screenshots for visual changes
  
 ## Checklist 📝
-- [ ] I have reviewed the code to ensure it follows the project style guidelines.
-- [ ] I have performed local tests of the changes made.
-- [ ] I have updated the relevant documentation (if applicable).
-- [ ] I have added screenshots for visual changes (if applicable).
+- [] I have reviewed the code to ensure it follows the project style guidelines.
+- [] I have performed local tests of the changes made.
+- [] I have updated the relevant documentation (if applicable).
+- [] I have added screenshots for visual changes (if applicable).
 
 ## Testing 🧪
 - Detail how the tests were performed and the results obtained
