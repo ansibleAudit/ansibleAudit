@@ -1,0 +1,45 @@
+site_name: ansibleAudit
+theme:
+   name: material
+   
+   features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    
+   palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+      
+nav:
+   - Home: index.md
+   - User Manual:
+      - User Manual: user_manual.md
+      - Interpretation of the results: results.md
+      - Reports and Dashboards: reports_and_dashboards.md
+   - Contributing Guide: 
+      - Introduction: contributing.md
+      - Find Vulnerabilities: find_vulnerabilities.md
+      - Create Ansible Playbooks:
+           - Create verification playbooks: create_checking_playbooks.md
+           - Create metadata playbooks: create_metadata_playbooks.md
+           - Scores: scores.md
+      - Test contributions: test_playbooks.md
+      - Create Pull Request: create_pull_request.md
+   - Ansible Best Practices: ansible_best_practices.md
