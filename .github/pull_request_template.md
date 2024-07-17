@@ -17,4 +17,4 @@
 - [] I have added screenshots for visual changes (if applicable).
 
 ## Testing 🧪
-- Detail how the tests were performed and the results obtained
+- Detail how the tests were performed and the results obtained.
