@@ -7,4 +7,4 @@ Once the playbooks have been created, you must perform the following tests:
 
 2.-Execution in test mode: Test the playbooks using Ansible's --check mode to make sure they work as expected without making changes to the system.
 
-examples
+**Examples**

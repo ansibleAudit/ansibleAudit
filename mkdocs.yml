@@ -26,20 +26,24 @@ theme:
         name: Switch to light mode    
       primary: teal
       accent: lime
+
+markdown_extensions:
+  - admonition
+
       
 nav:
    - Home: index.md
    - User Manual:
-      - User Manual: user_manual.md
-      - Interpretation of the results: results.md
-      - Reports and Dashboards: reports_and_dashboards.md
+      - User Manual: user_manual/user_manual.md
+      - Interpretation of the results: user_manual/results.md
+      - Reports and Dashboards: user_manual/reports_and_dashboards.md
    - Contributing Guide: 
-      - Introduction: contributing.md
-      - Find Vulnerabilities: find_vulnerabilities.md
+      - Contributing Guide: contribution_guide/contributing.md
+      - Find Vulnerabilities: contribution_guide/find_vulnerabilities.md
       - Create Ansible Playbooks:
-           - Create verification playbooks: create_checking_playbooks.md
-           - Create metadata playbooks: create_metadata_playbooks.md
-           - Scores: scores.md
-      - Test contributions: test_playbooks.md
-      - Create Pull Request: create_pull_request.md
+           - Create verification playbooks: contribution_guide/create_checking_playbooks.md
+           - Create metadata playbooks: contribution_guide/create_metadata_playbooks.md
+           - Scores: contribution_guide/scores.md
+      - Test contributions: contribution_guide/test_playbooks.md
+      - Create Pull Request: contribution_guide/create_pull_request.md
    - Ansible Best Practices: ansible_best_practices.md
