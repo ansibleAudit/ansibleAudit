@@ -1,4 +1,4 @@
-# Find vulnerabilities
+# **Find vulnerabilities**
 Vulnerability finding is the process of identifying and documenting security weaknesses in computer systems that could be exploited by attackers. This process is crucial to ensure the security and integrity of the systems.
 Before contributing, it is important to identify existing vulnerabilities. This can be accomplished using reliable vulnerability databases and benchmarks. Here it provide a brief explanation of three important and reliable sources:
 

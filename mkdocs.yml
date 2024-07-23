@@ -27,9 +27,8 @@ theme:
       primary: teal
       accent: lime
 
-markdown_extensions:
-  - admonition
-
+copyright: |
+  &copy; 2024 <a href="https://github.com/marcSerrano2613"  target="_blank" rel="noopener">Marc Serrano</a>
       
 nav:
    - Home: index.md

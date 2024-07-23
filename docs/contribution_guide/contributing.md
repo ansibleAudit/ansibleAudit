@@ -16,11 +16,12 @@ If you prefer to use an SSH URL to clone the repository, follow these steps:
 > 1. **Generate an SSH key**: It is necessary to generate an SSH key if you do not have one. 
 > 2. **Add SSH key** to your Github account
 > 3. **Clone the repository**
-After adding your SSH key to your Github account. Clone the repository using the SSH URL:
-
+>
+> After adding your SSH key to your Github account. Clone the repository using the SSH URL:
+>
         git clone git@github.com:ansibleAudit/ansibleAudit.git
 
-
+##
 >
 > **Note:**
 >
@@ -84,21 +85,21 @@ If the following steps are performed it will be easier to identify the task and 
 
 ## **Steps for Contributing**
 >
-> 1. [Find vulnerabilities](contribution_guide/find_vulnerabilities.md)
+> 1. [Find vulnerabilities](find_vulnerabilities.md)
 >
 > 2. Create Ansible Playbooks
 >
-	> 2.1 [Create verification playbooks](contribution_guide/create_checking_playbooks.md)
+	> 2.1 [Create verification playbooks](create_checking_playbooks.md)
 	>
-	> 2.2 [Create metadata playbooks](contribution_guide/create_metadata_playbooks.md)
+	> 2.2 [Create metadata playbooks](create_metadata_playbooks.md)
 >
-> 3.- [Test contributions](contribution_guide/test_playbooks.md)
+> 3.- [Test contributions](test_playbooks.md)
 >
-> 4.- [Create a Pull Request](contribution_guide/creating_pr.md)
+> 4.- [Create a Pull Request](create_pull_request.md)
 >
 > 5.- Fork the repository (optional)
 >
-> 6.- [Future improvements of the application](contribution_guide/future_improvements.md)
+> 6.- [Future improvements of the application](future_improvements.md)
 >
 > 7.- Structure of the project
 >

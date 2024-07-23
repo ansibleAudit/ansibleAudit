@@ -29,7 +29,7 @@ For further inquiries, you can reach us at [support@example.com](mailto:support@
 
 ## **License**
 
-ansibleAudit is released under the [MIT License](LICENSE).
+ansibleAudit is released under the [GPL-3.0 License](https://github.com/ansibleAudit/ansibleAudit/blob/main/LICENSE).
 
 ---
 
