@@ -1,0 +1,48 @@
+site_name: ansibleAudit
+theme:
+   name: material
+   
+   features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    
+   palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/marcSerrano2613"  target="_blank" rel="noopener">Marc Serrano</a>
+      
+nav:
+   - Home: index.md
+   - User Manual:
+      - User Manual: user_manual/user_manual.md
+      - Interpretation of the results: user_manual/results.md
+      - Reports and Dashboards: user_manual/reports_and_dashboards.md
+   - Contributing Guide: 
+      - Contributing Guide: contribution_guide/contributing.md
+      - Find Vulnerabilities: contribution_guide/find_vulnerabilities.md
+      - Create Ansible Playbooks:
+           - Create verification playbooks: contribution_guide/create_checking_playbooks.md
+           - Create metadata playbooks: contribution_guide/create_metadata_playbooks.md
+           - Scores: contribution_guide/scores.md
+      - Test contributions: contribution_guide/test_playbooks.md
+      - Create Pull Request: contribution_guide/create_pull_request.md
+   - Ansible Best Practices: ansible_best_practices.md
