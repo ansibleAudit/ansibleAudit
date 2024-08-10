@@ -1,0 +1,12 @@
+---
+- name: Ensure Domain Firewall is Enabled
+  hosts: windows
+  tasks:
+    - name: Check if Domain Firewall is Enabled
+      include_tasks: check_firewall_domain.yml
+
+    - name: Check if Public Firewall is Enabled
+      include_tasks: check_firewall_public.yml
+
+    - name: Check if Private Firewall is Enabled
+      include_tasks: check_firewall_private.yml

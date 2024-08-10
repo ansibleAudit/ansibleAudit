@@ -7,13 +7,28 @@ print_message() {
     echo "==================================="
 }
 
+# Function to install Python packages
+install_python_package() {
+    package=$1
+    print_message "Installing Python package: $package..."
+    pip3 install "$package" || { echo "Failed to install $package"; exit 1; }
+}
+
 # Install Ansible
-print_message "Installing Ansible..."
-pip3 install ansible
-pip3 install ansible-core==2.13.9
+install_python_package ansible
+install_python_package ansible-core==2.13.9
+install_python_package ansible-runner
+install_python_package alive-progress
+install_python_package ansible-lint
+install_python_package rich
+install_python_package pdfkit
+install_python_package jinja2
+install_python_package distro
+install_python_package matplotlib
+install_python_package pdfplumber
 
-# Run the setup_config.yml playbook
-print_message "Running the install_packages.yml playbook..."
-ansible-playbook install_packages.yml
+# Install wkhtmltopdf and its dependencies
+print_message "Installing wkhtmltopdf..."
+sudo apt-get install -y wkhtmltopdf 
 
-print_message "Setup completed."
+print_message "Installation completed!"

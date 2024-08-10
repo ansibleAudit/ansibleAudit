@@ -2,6 +2,8 @@ from alive_progress import alive_bar
 import time
 import ansible_runner
 import os
+import platform
+import subprocess
 
 def run_playbook(playbook_path):
     """
@@ -15,7 +17,11 @@ def run_playbook(playbook_path):
     """
     with alive_bar() as bar:
         start_time = time.time()
-        results = ansible_runner.run(private_data_dir=os.getcwd(), playbook=playbook_path, quiet=True)
+        if 'microsoft' in platform.uname().release.lower():
+           results = ansible_runner.run(private_data_dir=os.getcwd(), inventory="../inventory.ini",
+           playbook=playbook_path, quiet=True)
+        else:
+           results = ansible_runner.run(private_data_dir=os.getcwd(), playbook=playbook_path, quiet=True)
         elapsed_time = time.time() - start_time
     print(f"  Rule {os.path.basename(playbook_path)} checked in {elapsed_time:.2f} seconds", end="\n")
     return results

@@ -1,0 +1,9 @@
+---
+- name: Check the value of the record UpdatePromptSettings
+  win_command:
+        powershell -Command "Get-ItemProperty -Path '{{ registry_path }}' -Name UpdatePromptSettings |
+        Select-Object -ExpandProperty UpdatePromptSettings"
+  register: update_prompt_settings
+  vars:
+    registry_path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint'
+  ignore_errors: yes
