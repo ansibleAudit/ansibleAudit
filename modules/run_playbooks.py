@@ -95,7 +95,15 @@ def run_playbooks(roles_dir):
     # Sistema y versión actual
     current_system = distro.name()
     current_version = distro.version()
-    windows_distro = get_windows_distro_name()
+    if is_wsl():
+       windows_distro = get_windows_distro_name()
+       match = re.search(r"(Microsoft Windows) \[Versión (\d+\.\d+\.\d+\.\d+)\]", windows_distro)
+       if match:
+            windows_name = match.group(1)
+            windows_name = windows_name.split(' ', 1)[1]
+            windows_version = match.group(2)
+            current_system = windows_name
+            current_version = windows_version
     ok_count = 0
     failed_count = 0
     total_rules = 0
@@ -119,15 +127,7 @@ def run_playbooks(roles_dir):
                    if metadata is None:
                       print(f"Error loading metadata from: {metadata_path}")
                       continue
-                   match = re.search(r"(Microsoft Windows) \[Versión (\d+\.\d+\.\d+\.\d+)\]", windows_distro)
-                   if match:
-                        windows_name = match.group(1)
-                        windows_name = windows_name.split(' ', 1)[1]
-                        windows_version = match.group(2)
-                        current_system = windows_name
-                        current_version = windows_version
-                        
-                        
+                                   
                    if is_compatible(metadata, current_system, current_version):
                        description, rationale, cvss_score = obtain_metadata_info(metadata)
                        rating_counts = get_rating_types_counts(cvss_score)
