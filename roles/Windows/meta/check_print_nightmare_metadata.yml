@@ -1,0 +1,17 @@
+---
+systems:
+   - name: "Windows"
+     versions: ['10.0.19045.4651']
+
+description: "PrintNightmare is a critical vulnerability in the Windows Print Spooler service that allows remote code
+     execution and elevation of privilege. This vulnerability affects various versions of Windows and can be exploited
+     by an attacker to execute arbitrary code on the affected system, which can compromise the confidentiality, 
+     integrity, and availability of system data and services."
+
+rationale: "The PrintNightmare vulnerability poses a significant threat to the security of Windows systems. 
+     It allows unauthenticated attackers to execute remote code with elevated privileges, which could lead to 
+     total system compromise, including unauthorized access to sensitive data and service disruption. The severity 
+     of this vulnerability justifies its high CVSS score and the urgent need for patching and mitigation measures to 
+     protect affected systems."
+          
+cvss_score: 8.8

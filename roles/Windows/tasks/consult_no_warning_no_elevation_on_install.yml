@@ -1,0 +1,9 @@
+---
+- name: Check the value of the record NoWarningNoElevationOnInstall
+  win_command:
+      powershell -Command "Get-ItemProperty -Path '{{ registry_path }}' -Name NoWarningNoElevationOnInstall |
+      Select-Object -ExpandProperty NoWarningNoElevationOnInstall"
+  register: no_warning_no_elevation
+  vars:
+    registry_path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint'
+  ignore_errors: yes

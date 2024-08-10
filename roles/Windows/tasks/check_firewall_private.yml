@@ -1,0 +1,9 @@
+---
+- name: Check if Private Firewall is Enabled
+  win_shell: Get-NetFirewallProfile -Profile Private | Select-Object -ExpandProperty Enabled
+  register: private_firewall_status
+
+- name: Fail if Private Firewall is not enabled
+  fail:
+      msg: "[Remediation] Set-NetFirewallProfile -Profile Private -Enabled True"
+  when: private_firewall_status.stdout.strip() != "True"

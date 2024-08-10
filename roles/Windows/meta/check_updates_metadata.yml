@@ -1,0 +1,18 @@
+---
+systems:
+   - name: "Windows"
+     versions: ['10.0.19045.4651'] 
+       
+description: |
+  This playbook checks if there are pending updates on Windows systems. Updates include
+  critical, security, and cumulative patches, which is essential to keep the system protected against
+  known vulnerabilities. Installing updates ensures integrity, confidentiality, and
+  system availability.
+
+rationale: |
+  Keeping the operating system up to date is crucial for system security and performance. The 
+  Security updates address vulnerabilities that could be exploited by attackers to compromise 
+  the system. By checking and installing updates regularly, you mitigate the risk of exploitation and ensure that you 
+  that the system is protected against known threats.
+
+cvss_score: 9.0

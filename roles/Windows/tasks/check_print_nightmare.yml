@@ -1,0 +1,37 @@
+---
+- name: Check record values for PrintNightmare
+  hosts: windows
+  gather_facts: yes
+  vars:
+    registry_path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint'
+    remediations:
+        - "If the print service is not required, you should stop and disable it to mitigate the vulnerability"
+        - "Stop-Service -Name Spooler -Force"
+        - "Set-Service -Name Spooler -StartupType Disabled"
+        - "If you need to keep the Print Spooler service active for local printing but want to mitigate the risk of remote exploitation:"
+        - "Open the Group Policy Editor (gpedit.msc)."
+        - "Navigate to Computer Configuration-Administrative Templates-Printers"
+        - "Disable the Allow Print Spooler to accept client connections policy"
+        - "This will block the remote attack vector and allow local printing if the Print Spooler service is still enabled."
+
+  tasks:
+    - name: Check the value of the record NoWarningNoElevationOnInstall
+      include_tasks: consult_no_warning_no_elevation_on_install.yml 
+      register: no_warning_no_elevation
+
+    - name: Check the value of the record UpdatePromptSettings
+      include_tasks: consult_update_prompt_settings.yml
+      register: update_prompt_settings
+ 
+    - name: Obtain Print Spooler status
+      win_shell:  |
+        $status = (Get-Service -Name Spooler).Status
+        Write-Output $status
+      register: spooler_status
+
+    - name: Fail if the service Print Spooler is running and the values of the record are equal to 1
+      fail:
+        msg: "[Remediation] {{ remediations }}"
+      when: (spooler_status.stdout.strip() == "Running") and
+        (no_warning_no_elevation.stdout.strip() == "1") and
+        (update_prompt_settings.stdout.strip() == "1")

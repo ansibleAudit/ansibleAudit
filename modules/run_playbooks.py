@@ -2,6 +2,9 @@ import os
 import distro
 import yaml
 import shutil
+import platform
+import subprocess
+import re
 from modules.report_generator import generate_report
 from rich.console import Console
 from modules.generate_pdf_dashboards import create_pdf_with_dashboards
@@ -11,9 +14,41 @@ from modules.handle_results import handle_results
 from modules.get_rating_counts import get_rating_types_counts
 
 console = Console()
-# Sistema y versión actual
-current_system = distro.name()
-current_version = distro.version()
+
+
+def get_windows_distro_name():
+    """
+    Gets the distribution name of Windows. If running in WSL, retrieves the Windows version.
+    
+    Returns:
+        str: The name of the Windows distribution or version.
+    """
+    if is_wsl():
+        # Retrieve Windows version information using Windows command
+        try:
+            output = subprocess.check_output("cmd.exe /c ver", shell=True, stderr=subprocess.STDOUT).decode()
+            match = re.search(r"Microsoft Windows \[Versión \d+\.\d+\.\d+\.\d+\]", output)
+            if match:
+                return match.group(0)
+            else:
+                return "No se pudo encontrar la versión de Windows en la salida."
+        except subprocess.CalledProcessError as e:
+            return f"Failed to retrieve Windows version: {e}"
+  
+            
+            
+def is_wsl():
+    """
+    Detects if the script is running on WSL (Windows Subsystem for Linux).
+    
+    Returns:
+        bool: True if running on WSL, False otherwise.
+    """
+    # Check if the environment contains 'Microsoft' which indicates WSL
+    if 'microsoft' in platform.uname().release.lower():
+        return True
+    else: 
+        return False
 
 def load_metadata(file_path):
     """
@@ -57,6 +92,10 @@ def run_playbooks(roles_dir):
     Returns:
         None
     """
+    # Sistema y versión actual
+    current_system = distro.name()
+    current_version = distro.version()
+    windows_distro = get_windows_distro_name()
     ok_count = 0
     failed_count = 0
     total_rules = 0
@@ -80,12 +119,20 @@ def run_playbooks(roles_dir):
                    if metadata is None:
                       print(f"Error loading metadata from: {metadata_path}")
                       continue
-
+                   match = re.search(r"(Microsoft Windows) \[Versión (\d+\.\d+\.\d+\.\d+)\]", windows_distro)
+                   if match:
+                        windows_name = match.group(1)
+                        windows_name = windows_name.split(' ', 1)[1]
+                        windows_version = match.group(2)
+                        current_system = windows_name
+                        current_version = windows_version
+                        
+                        
                    if is_compatible(metadata, current_system, current_version):
                        description, rationale, cvss_score = obtain_metadata_info(metadata)
                        rating_counts = get_rating_types_counts(cvss_score)
                        metadata_info = [description, rationale, cvss_score]
-		       # Search for the corresponding playbook
+		               # Search for the corresponding playbook
                        playbook_name = filename.replace('_metadata.yml', '.yml')
                        playbook_path = os.path.join(role_path, 'tasks', playbook_name)
                        print(f"  Running {playbook_name}...")

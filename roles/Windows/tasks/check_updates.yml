@@ -1,0 +1,22 @@
+---
+- name: Check pending updates on Windows
+  hosts: windows
+  vars:
+      remediations:
+            - "Install-WindowsUpdate -AcceptAll -AutoReboot"
+  gather_facts: yes
+  tasks:
+    - name: Check if there are pending updates
+      win_updates:
+        category_names:
+          - CriticalUpdates
+          - SecurityUpdates
+          - UpdateRollups
+        state: searched
+      register: updates
+
+    - name: Fail if there are pending updates
+      fail:
+        msg: "[Remediation] {{ remediations }}"
+      when: updates.updates | length > 0
+

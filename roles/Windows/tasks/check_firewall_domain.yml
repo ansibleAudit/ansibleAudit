@@ -1,0 +1,9 @@
+---
+- name: Check if Domain Firewall is Enabled
+  win_shell: Get-NetFirewallProfile -Profile Domain | Select-Object -ExpandProperty Enabled
+  register: domain_firewall_status
+
+- name: Fail if Domain Firewall is not enabled
+  fail:
+      msg: "[Remediation] Set-NetFirewallProfile -Profile Domain -Enabled True"
+  when: domain_firewall_status.stdout.strip() != "True"

@@ -1,0 +1,19 @@
+---
+systems:
+   - name: "Windows"
+     versions: ['10.0.19045.4651']
+
+description: |
+  This playbook ensures that the Windows Firewall is enabled for Domain, Public, and Private profiles.
+  The firewall is a critical component for network security, preventing unauthorized access and potential threats
+  from reaching the system. Ensuring the firewall is active on all profiles helps maintain the integrity, 
+  confidentiality, and availability of the system.
+
+rationale: |
+  Firewalls are essential for protecting systems from network-based threats. By ensuring that the Domain,
+  Public, and Private firewalls are enabled, we reduce the risk of unauthorized access and attacks.
+  This is particularly important in environments where systems are exposed to various network conditions
+  and potential attack vectors.
+
+cvss_score: 9.3
+
