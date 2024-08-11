@@ -6,9 +6,6 @@
   hosts: localhost
   tasks:
      - name: Include OS-specific variables
-       include_vars: "../../common/vars/global_vars.yml"
-          
-     - name: Include OS-specific variables
        include_vars: "../vars/{{ ansible_facts.distribution }}.yml"
        
      - name: Check pending packages updates

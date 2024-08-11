@@ -2,14 +2,14 @@
 # © 2024 marcSerrano2613
 # Licensed under the MIT License. See LICENSE file in the project root for full license information.
 
-- name: Ensure there are not pending packages updates
+- name: Check if there are pending updates
   hosts: localhost
-  tasks:     
+  tasks:    
      - name: Include OS-specific variables
-       include_vars: "../vars/{{ ansible_facts.distribution }}.yml"
+       include_vars: "../vars/Fedora.yml"
        
      - name: Check pending packages updates
        include_tasks: ../../common/tasks/check_updates.yml
        vars:
-          check_updates_command: dnf check-update
-          remediation: dnf update
+          check_updates_command: "{{ check_packages_updates }}"
+          remediation: "{{ install_updates }}"

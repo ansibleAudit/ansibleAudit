@@ -4,10 +4,9 @@
 
 #Files
 
-
 #Packages
 
-
 # Commands
-update_packages_command: update_packages_dnf
-check_updates_command: check_updates_dnf
+check_packages_updates: "dnf updateinfo list available"
+install_updates: "dnf upgrade"
+install_xz_command: "dnf install xz=5.4.6"

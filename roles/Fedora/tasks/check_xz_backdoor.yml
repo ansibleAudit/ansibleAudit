@@ -6,7 +6,7 @@
   hosts: localhost
   tasks:
      - name: Include OS-specific variables
-       include_vars: "../vars/Ubuntu.yml"
+       include_vars: "../vars/Fedora.yml"
        
      - name: Include global variables
        include_vars: "../../common/vars/global_vars.yml"

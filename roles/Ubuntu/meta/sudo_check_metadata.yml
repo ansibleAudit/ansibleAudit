@@ -6,8 +6,6 @@
 systems:
   - name: "Ubuntu"
     versions: ['24.04', '23.10', '22.04', '20.04']
-  - name: "Fedora"
-    versions: ['40', '39', '38']
     
 description: "sudo allows a permitted user to execute a command as the superuser or another user, as 
      specified by the security policy. The invoking user's real (not effective) userID is used to determine

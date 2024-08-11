@@ -7,22 +7,10 @@ systems:
   - name: "Fedora"
     versions: ['40', '39', '38']
     
-description: "XZ Utils is a popular collection of data compression libraries and tools lossless compressors.
-XZ is the main program for compressing and decompressing files in the XZ format, and lblzma is a 
-open source library that provides functions and tools for compression and decompression using the LZMA 
-algorithm."
+description: "XZ Utils is a popular collection of data compression libraries and tools lossless compressors. XZ is the main program for compressing and decompressing files in the XZ format, and lblzma is a open source library that provides functions and tools for compression and decompression using the LZMA algorithm."
      
-rationale: "The vulnerability affects only versions 5.6.0 and 5.6.1 of XZ and Liblzma. 
-It is considered a very serious threat because it allows remote code execution, allowing
-for attackers to run malicious software, access confidential data and gain control on affected 
-systems from anywhere in the world. It is currently detected that the vulnerability affects Kali Linux
-(available between March 26 and 29), openSUSE (from March 7 as of March 28), Fedora 41, Fedora Rawhide, 
-Fedora Linux 40 beta, Debian (in distributions test, unstable and experimental), Arco Linux and Alpine Edge. 
-But very carefully, because additional operating systems and distributions may be added over time. For this 
-reason, this rule is responsible for checking for all linux distributions that do not have installed
-versions 5.6.0 and 5.6.1 of the xz and liblzma programs."
+rationale: "The vulnerability affects only versions 5.6.0 and 5.6.1 of XZ and Liblzma. It is considered a very serious threat because it allows remote code execution, allowing for attackers to run malicious software, access confidential data and gain control on affected systems from anywhere in the world. It is currently detected that the vulnerability affects Kali Linux (available between March 26 and 29), openSUSE (from March 7 as of March 28), Fedora 41, Fedora Rawhide, Fedora Linux 40 beta, Debian (in distributions test, unstable and experimental), Arco Linux and Alpine Edge. But very carefully, because additional operating systems and distributions may be added over time. For this reason, this rule is responsible for checking for all linux distributions that donot have installed versions 5.6.0 and 5.6.1 of the xz and liblzma programs."
 
-remediation: "The recommended mitigation is to immediately downgrade xz and liblzma to a safe version, 
-like version 5.4.6."
+remediation: "The recommended mitigation is to immediately downgrade xz and liblzma to a safe version, like version 5.4.6."
      
 cvss_score: 10.0
