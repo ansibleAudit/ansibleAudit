@@ -1,0 +1,13 @@
+---
+# © 2024 marcSerrano2613
+# Licensed under the MIT License. See LICENSE file in the project root for full license information.
+
+- name: Ensure wkhtmltopdf is installed
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Install wkhtmltopdf using the appropriate package manager
+      package:
+        name: wkhtmltopdf
+        state: present
+
