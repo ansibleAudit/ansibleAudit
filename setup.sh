@@ -28,7 +28,6 @@ install_python_package matplotlib
 install_python_package pdfplumber
 
 # Install wkhtmltopdf and its dependencies
-print_message "Installing wkhtmltopdf..."
-sudo apt-get install -y wkhtmltopdf 
+ansible-playbook install_wkhtmltopdf.yml --ask-become-pass
 
 print_message "Installation completed!"
