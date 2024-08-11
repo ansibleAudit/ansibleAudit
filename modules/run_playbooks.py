@@ -15,6 +15,21 @@ from modules.get_rating_counts import get_rating_types_counts
 
 console = Console()
 
+def get_system_name_for_compatibility(system_name):
+    """
+    Maps system names to the format used in metadata.
+    
+    Args:
+        system_name (str): The system name returned by distro.name().
+        
+    Returns:
+        str: A standardized system name for compatibility checks.
+    """
+    system_map = {
+        'Fedora Linux': 'Fedora',
+        'Ubuntu': 'Ubuntu',
+    }
+    return system_map.get(system_name, system_name)
 
 def get_windows_distro_name():
     """
@@ -92,9 +107,10 @@ def run_playbooks(roles_dir):
     Returns:
         None
     """
-    # Sistema y versión actual
-    current_system = distro.name()
+    # Current system and version
+    current_system = get_system_name_for_compatibility(distro.name())
     current_version = distro.version()
+    rating_counts = {"None": 0,"Low": 0,"Medium": 0,"High": 0,"Critical": 0,"Invalid score": 0}
     if is_wsl():
        windows_distro = get_windows_distro_name()
        match = re.search(r"(Microsoft Windows) \[Versión (\d+\.\d+\.\d+\.\d+)\]", windows_distro)
@@ -130,7 +146,6 @@ def run_playbooks(roles_dir):
                                    
                    if is_compatible(metadata, current_system, current_version):
                        description, rationale, cvss_score = obtain_metadata_info(metadata)
-                       rating_counts = get_rating_types_counts(cvss_score)
                        metadata_info = [description, rationale, cvss_score]
 		               # Search for the corresponding playbook
                        playbook_name = filename.replace('_metadata.yml', '.yml')
@@ -145,6 +160,7 @@ def run_playbooks(roles_dir):
                        if success:
                           ok_count += 1
                        else:
+                          rating_counts = get_rating_types_counts(cvss_score)
                           failed_count += 1
                        generate_report(playbook_name, current_system, current_version, state, remediations, metadata_info)
     total_rules = ok_count + failed_count

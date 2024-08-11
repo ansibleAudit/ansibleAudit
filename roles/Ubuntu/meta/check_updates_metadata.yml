@@ -6,8 +6,6 @@
 systems:
   - name: "Ubuntu"
     versions: ['24.04', '23.10', '22.04', '20.04']
-  - name: "Kali"
-    versions: ['2024.2']
     
 description: "It ensures that systems are kept up-to-date with the latest security
 patches and bug fixes available thorugh package repositories."

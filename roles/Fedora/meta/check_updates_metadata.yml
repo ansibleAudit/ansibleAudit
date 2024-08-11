@@ -4,8 +4,8 @@
 
 # Metadata of check_updates.yml
 systems:
-  - name: "Kali"
-    versions: ['2024.2']
+  - name: "Fedora"
+    versions: ['40', '39', '38']
     
 description: "It ensures that systems are kept up-to-date with the latest security
 patches and bug fixes available thorugh package repositories."
