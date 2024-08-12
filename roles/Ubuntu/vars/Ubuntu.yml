@@ -10,3 +10,4 @@ avahi_daemon_package: avahi-daemon
 # Commands
 check_packages_updates: "apt list --upgradable"
 install_xz_command: "apt install xz=5.4.6"
+xz_package: xz-utils

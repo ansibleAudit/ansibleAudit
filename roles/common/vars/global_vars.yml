@@ -8,7 +8,6 @@ passwd_file: "/etc/passwd"
 #Packages
 sudo_package: sudo
 versions_xz: [5.6.0, 5.6.1]
-xz_package: xz
 
 # Commands
 

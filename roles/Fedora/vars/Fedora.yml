@@ -10,3 +10,4 @@
 check_packages_updates: "dnf updateinfo list available"
 install_updates: "dnf upgrade"
 install_xz_command: "dnf install xz=5.4.6"
+xz_package: xz
