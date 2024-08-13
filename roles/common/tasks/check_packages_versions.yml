@@ -5,8 +5,8 @@
 - name: Gather package facts
   ansible.builtin.package_facts:
      manager: auto
-        
+
 - name: Check package versions are versions vulnerable
   ansible.builtin.fail:
-    msg: "Package {{ package_name }} version {{ ansible_facts.packages[package_name][0].version }} is installed. [Remediation] {{ remediation }}"
+     msg: "Package {{ package_name }} version {{ ansible_facts.packages[package_name][0].version }} is installed. [Remediation] {{ remediation }}"
   when: ansible_facts.packages[package_name][0].version | regex_replace('-.*', '')  in versions_xz

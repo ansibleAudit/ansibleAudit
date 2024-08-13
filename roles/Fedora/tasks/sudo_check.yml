@@ -7,7 +7,7 @@
   tasks:
      - name: Include OS-specific variables
        include_vars: "../../common/vars/global_vars.yml"
-          
+
      - name: Check if sudo is installed
        include_tasks: "../../common/tasks/check_if_package_not_installed.yml"
        vars:

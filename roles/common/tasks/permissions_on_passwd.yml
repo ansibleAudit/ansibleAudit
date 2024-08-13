@@ -2,7 +2,7 @@
 # © 2024 marcSerrano2613
 # Licensed under the MIT License. See LICENSE file in the project root for full license information.
 
-- name: Ensure permissions on /etc/passwd are configured 
+- name: Ensure permissions on /etc/passwd are configured
   hosts: localhost
   vars:
      remediation_commands:
@@ -11,17 +11,17 @@
      expected_uid: 0
      expected_gid: 0
      expected_mode: "0644"
-     
+
   tasks:
      - name: Include OS-specific variables
        include_vars: "../../common/vars/global_vars.yml"
-          
+
      - name: Check current permissions and ownership of /etc/passwd
        include_tasks: ../../common/tasks/check_passwd_file.yml
        vars:
           passwd: "{{ passwd_file }}"
        register: passwd_stat
-          
+
      - name: Fail if ownership or permissions on /etc/passwd are not correct
        ansible.builtin.fail:
           msg: "[Remediation]{{ remediation_commands }}"

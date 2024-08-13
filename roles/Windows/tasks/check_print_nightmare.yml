@@ -1,7 +1,7 @@
 ---
 - name: Check record values for PrintNightmare
   hosts: windows
-  gather_facts: yes
+  gather_facts: true
   vars:
     registry_path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint'
     remediations:
@@ -16,13 +16,13 @@
 
   tasks:
     - name: Check the value of the record NoWarningNoElevationOnInstall
-      include_tasks: consult_no_warning_no_elevation_on_install.yml 
+      include_tasks: consult_no_warning_no_elevation_on_install.yml
       register: no_warning_no_elevation
 
     - name: Check the value of the record UpdatePromptSettings
       include_tasks: consult_update_prompt_settings.yml
       register: update_prompt_settings
- 
+
     - name: Obtain Print Spooler status
       win_shell:  |
         $status = (Get-Service -Name Spooler).Status
