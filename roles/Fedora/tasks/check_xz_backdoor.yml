@@ -7,10 +7,10 @@
   tasks:
      - name: Include OS-specific variables
        include_vars: "../vars/Fedora.yml"
-       
+
      - name: Include global variables
        include_vars: "../../common/vars/global_vars.yml"
-     
+
      - name: Check if xz is installed
        include_tasks: ../../common/tasks/check_packages_versions.yml
        vars:
@@ -18,4 +18,3 @@
           remediation: "{{ install_xz_command }}"
           versions_xz_vulnerable: "{{ versions_xz }}"
        register: package_check_result
-    

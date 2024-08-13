@@ -1,11 +1,11 @@
 ---
 # © 2024 marcSerrano2613
 # Licensed under the MIT License. See LICENSE file in the project root for full license information.
-
 - name: Check pending updates
-  command: "{{ check_updates_command }}"
+  ansible.builtin.command: "{{ check_updates_command }}"
   register: output
-       
+  changed_when: false
+
 - name: Fail if updates are available
   ansible.builtin.fail:
      msg: "There are pending updates available. [Remediation] {{ remediation }}"

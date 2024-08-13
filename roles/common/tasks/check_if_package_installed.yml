@@ -5,8 +5,8 @@
 - name: Gather package facts
   ansible.builtin.package_facts:
      manager: auto
-        
+
 - name: Check if package is installed
   ansible.builtin.fail:
-    msg: "Package {{ package_name }} is installed. [Remediation] {{ remediation }}"
+     msg: "Package {{ package_name }} is installed. [Remediation] {{ remediation }}"
   when: package_name in ansible_facts.packages

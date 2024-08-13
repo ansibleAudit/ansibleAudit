@@ -1,9 +1,9 @@
 ---
 - name: Check if Public Firewall is Enabled
-  win_shell: Get-NetFirewallProfile -Profile Public | Select-Object -ExpandProperty Enabled
+  ansible.windows.win_shell: Get-NetFirewallProfile -Profile Public | Select-Object -ExpandProperty Enabled
   register: public_firewall_status
 
 - name: Fail if Public Firewall is not enabled
-  fail:
+  ansible.builtin.fail:
       msg: "[Remediation] Set-NetFirewallProfile -Profile Public -Enabled True"
   when: public_firewall_status.stdout.strip() != "True"

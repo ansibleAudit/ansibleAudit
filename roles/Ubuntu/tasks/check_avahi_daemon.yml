@@ -6,15 +6,16 @@
   hosts: localhost
   vars:
      remediation_commands:
-          - systemctl stop avahi-daemon.service
-          - systemctl stop avahi-daemon.socket
-          - apt purge avahi-daemon
-  tasks:     
+        - systemctl stop avahi-daemon.service
+        - systemctl stop avahi-daemon.socket
+        - apt purge avahi-daemon
+
+  tasks:
      - name: Include OS-specific variables
        include_vars: "../vars/{{ ansible_facts.distribution }}.yml"
-       
+
      - name: Check if avahi-daemon is not installed
        include_tasks: ../../common/tasks/check_if_package_installed.yml
        vars:
           package_name: "{{ avahi_daemon_package }}"
-          remediation: "{{ remediation_commands }}"         
+          remediation: "{{ remediation_commands }}"
