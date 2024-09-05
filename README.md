@@ -3,7 +3,6 @@
 ![Version](https://img.shields.io/github/v/release/ansibleAudit/ansibleAudit)
 ![Issues](https://img.shields.io/github/issues/ansibleAudit/ansibleAudit)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ansibleAudit/ansibleAudit)
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/ansibleAudit/ansibleAudit/total)
 ![GitHub forks](https://img.shields.io/github/forks/ansibleAudit/ansibleAudit)
 ![GitHub watchers](https://img.shields.io/github/watchers/ansibleAudit/ansibleAudit)
 ![GitHub Repo stars](https://img.shields.io/github/stars/ansibleAudit/ansibleAudit)
@@ -12,6 +11,15 @@
 
 # ansibleAudit
 ansibleAudit is an open source tool designed to perform automated audits of system configurations using Ansible. This tool uses Ansible playbooks to verify configurations according to security best practices. If vulnerabilities or misconfigurations are identified, ansibleAudit provides detailed recommendations and procedures to effectively remediate them.
+
+## Prerequisites:
+
+   * Python 3.10 installed on the system
+
+   * Git installed
+
+   * Pip installed
+
 
 ## Features
 - **Automated Audits**: Perform comprehensive checks on your system configurations.
