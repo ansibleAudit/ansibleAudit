@@ -1,0 +1,1158 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../reports_and_dashboards/">
+      
+      
+        <link rel="next" href="../../contribution_guide/contributing/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Installation for Windows - ansibleAudit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation-manual-for-windows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ansibleAudit" class="md-header__button md-logo" aria-label="ansibleAudit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ansibleAudit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation for Windows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../user_manual/" class="md-tabs__link">
+          
+  
+  User Manual
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Installation for Windows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contribution_guide/contributing/" class="md-tabs__link">
+          
+  
+  Contributing Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ansibleAudit" class="md-nav__button md-logo" aria-label="ansibleAudit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ansibleAudit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpretation of the results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports_and_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reports and Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Installation for Windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installation for Windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation for Windows
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Installation for Windows
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install WSL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-ubuntu-2204-lts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Install Ubuntu 22.04 LTS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-a-user-and-add-to-the-administrators-group-using-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create a User and Add to the Administrators Group Using PowerShell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-powershell-and-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Verify PowerShell and .NET
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-configure-winrm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Configure WinRM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-download-and-run-the-script-to-configure-winrm-for-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Download and Run the Script to Configure WinRM for Ansible
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-winrm-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify WinRM Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#win_pingyml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      win_ping.yml File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the Playbook
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contributing Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contributing Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution_guide/contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution_guide/find_vulnerabilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Find Vulnerabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Create Ansible Playbooks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create Ansible Playbooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution_guide/create_checking_playbooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create verification playbooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution_guide/create_metadata_playbooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create metadata playbooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution_guide/scores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution_guide/test_playbooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test contributions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution_guide/create_pull_request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Pull Request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="installation-manual-for-windows">Installation Manual for Windows</h1>
+<p>This section explains the installation manual for Windows, providing detailed instructions for properly configuring the system.</p>
+<h2 id="step-1-install-wsl">Step 1: Install WSL</h2>
+<ol>
+<li><strong>Open PowerShell as Administrator</strong>: Right-click on the Start menu and select "Windows PowerShell (Administrator)".</li>
+<li>
+<p><strong>Enable WSL</strong>: In the PowerShell window, execute the following command:</p>
+<p><code>powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</code></p>
+</li>
+<li>
+<p><strong>Restart the computer</strong>: Once the installation is complete, it's necessary to restart the computer to apply the changes.</p>
+</li>
+</ol>
+<h2 id="step-2-install-ubuntu-2204-lts">Step 2: Install Ubuntu 22.04 LTS</h2>
+<ol>
+<li><strong>Open Microsoft Store</strong>: Open Microsoft Store from the Start menu.</li>
+<li>
+<p><strong>Search and install Ubuntu 22.04</strong>:</p>
+<ul>
+<li>In the search bar of Microsoft Store, type <strong>Ubuntu 22.04 LTS</strong> and press Enter.</li>
+<li>Select <strong>Ubuntu 22.04 LTS</strong> from the search results.</li>
+<li>Click <strong>Get</strong> or <strong>Install</strong> to download and install the distribution (sign-in to the store is not required for this installation).</li>
+</ul>
+</li>
+<li>
+<p><strong>Launch Ubuntu 22.04</strong>: Once the installation is complete, open <strong>Ubuntu 22.04</strong> from the Start menu.</p>
+</li>
+<li><strong>Configure Ubuntu 22.04</strong>: Upon starting Ubuntu for the first time, you will be asked to create a username and password. This will create a local user account.</li>
+<li>
+<p><strong>Update Ubuntu software packages</strong>: Once logged into Ubuntu, open the terminal (if it doesn't open automatically) and run the following command to update all software packages:</p>
+<p><code>bash
+sudo apt update &amp;&amp; sudo apt upgrade -y</code></p>
+<p>This command will update the list of available packages and upgrade all installed packages to the latest versions.</p>
+</li>
+</ol>
+<h2 id="step-3-create-a-user-and-add-to-the-administrators-group-using-powershell">Step 3: Create a User and Add to the Administrators Group Using PowerShell</h2>
+<ol>
+<li>
+<p><strong>Open PowerShell as Administrator</strong>: To begin, open PowerShell with administrator privileges. Right-click on the Windows Start button and select "Windows PowerShell (Administrator)" or "PowerShell (Administrator)". This ensures you have the necessary permissions to make changes to the system.</p>
+</li>
+<li>
+<p><strong>Create a New User</strong>: Next, create a new user named <strong>"ansible"</strong>. Use the following command to create the user with a specific password and set the password to never expire:</p>
+<p><code>powershell
+New-LocalUser -Name "ansible" -FullName "ansible" -Description "ansible user" -Password (ConvertTo-SecureString "SuperSecurePassword123@" -AsPlainText -Force) -PasswordNeverExpires</code></p>
+</li>
+<li>
+<p><strong>Add the User to the Administrators Group</strong>: To add the <strong>"ansible"</strong> user to the Administrators group, first list the local groups to confirm the exact name of the Administrators group:</p>
+<p><code>powershell
+Get-LocalGroup</code></p>
+<p>This command will display all local groups on the system, including the name and description of each group. Look for the group corresponding to administrators, which is typically <strong>"Administrators"</strong>. Once confirmed, add the <strong>"ansible"</strong> user to the Administrators group with the following command:</p>
+<p><code>powershell
+Add-LocalGroupMember -Group "Administrators" -Member "ansible"</code></p>
+</li>
+</ol>
+<h2 id="step-4-verify-powershell-and-net">Step 4: Verify PowerShell and .NET</h2>
+<ol>
+<li>
+<p><strong>Verify PowerShell Version</strong>: To ensure that the PowerShell version is appropriate, use the following command:</p>
+<p><code>powershell
+Get-Host | Select-Object Version</code></p>
+<p>This command will display the current version of PowerShell installed on the system. Verify this version, as WinRM requires a specific version of PowerShell for proper compatibility and operation.</p>
+</li>
+<li>
+<p><strong>Verify .NET Version</strong>: To check the version of the .NET framework installed, use the following command:</p>
+<p><code>powershell
+Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP' -Recurse | Get-ItemProperty -Name version -EA 0 | Where { $_.PSChildName -Match '^(?!S)\p{L}' } | Select PSChildName, version</code></p>
+<p>This command accesses the Windows registry to retrieve information about the installed .NET framework versions.</p>
+</li>
+<li>
+<p><strong>Verify WinRM is Not Configured</strong>: To confirm if WinRM (Windows Remote Management) is configured on the system, use the following command:</p>
+<p><code>powershell
+winrm get winrm/config/Service</code></p>
+</li>
+</ol>
+<h2 id="step-5-configure-winrm">Step 5: Configure WinRM</h2>
+<p>To prepare WinRM (Windows Remote Management) to accept remote connections, follow these specific steps in PowerShell. These steps configure the service to allow connections through WinRM, which is necessary for remote management and automation with tools like Ansible.</p>
+<ol>
+<li>
+<p><strong>Open PowerShell as Administrator</strong>: To begin, open PowerShell with administrator privileges. Right-click on the Windows Start button and select "Windows PowerShell (Administrator)" or "PowerShell (Administrator)".</p>
+</li>
+<li>
+<p><strong>Configure WinRM</strong>: Execute the following commands in PowerShell:</p>
+<p>(a) <strong>Initialize Basic WinRM Configuration</strong>:</p>
+<pre><code>```powershell
+winrm quickconfig
+```
+</code></pre>
+<p>This command initializes the basic configuration of WinRM. If WinRM is not enabled, this command configures it to accept connections and sets the default configurations.</p>
+<p>(b) <strong>Allow Basic Authentication</strong>:</p>
+<pre><code>```powershell
+winrm set winrm/config/service/auth '@{Basic="true"}'
+```
+</code></pre>
+<p>Basic authentication allows credentials to be transmitted in plain text. This option can be useful for testing environments but is not recommended for production environments without proper encryption.</p>
+<p>(c) <strong>Allow Unencrypted Connections</strong>:</p>
+<pre><code>```powershell
+winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+```
+</code></pre>
+<p>This allows unencrypted connections, which can be a vulnerability in production environments. In such cases, it is advisable to use Kerberos for more robust security. Using Kerberos requires additional configuration, including domain configuration, ticket generation for authentication, configuring WinRM to use Kerberos, and managing keys and security policies.</p>
+</li>
+</ol>
+<h2 id="step-6-download-and-run-the-script-to-configure-winrm-for-ansible">Step 6: Download and Run the Script to Configure WinRM for Ansible</h2>
+<p>To complete the WinRM configuration for use with Ansible, follow these additional steps:</p>
+<ol>
+<li>
+<p><strong>Ensure PowerShell Uses TLS 1.2</strong>: To ensure secure connections with Ansible, make sure PowerShell uses TLS 1.2. Execute the following command in PowerShell:</p>
+<p><code>powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12</code></p>
+</li>
+<li>
+<p><strong>Download the Configuration Script</strong>: Download the script provided by Ansible that configures WinRM for use with Ansible. Use the following commands to download and execute the script:</p>
+<p><code>powershell
+$url = "https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1"
+$file = "$env:temp\ConfigureRemotingForAnsible.ps1"
+(New-Object -TypeName System.Net.WebClient).DownloadFile($url, $file)</code></p>
+</li>
+<li>
+<p><strong>Run the Configuration Script</strong>: Once the script is downloaded, the final step is to execute it to configure WinRM. Use the following command to run the script with the appropriate options:</p>
+<p><code>powershell
+powershell.exe -ExecutionPolicy ByPass -File $file</code></p>
+<p>The <code>-ExecutionPolicy ByPass</code> option allows the script to run without the usual PowerShell execution policy restrictions, ensuring that the script can execute correctly.</p>
+</li>
+</ol>
+<h2 id="verify-winrm-configuration">Verify WinRM Configuration</h2>
+<p>To ensure that WinRM (Windows Remote Management) is configured correctly on a system, it is important to check various aspects of its configuration.</p>
+<ol>
+<li>
+<p><strong>Verify Current WinRM Configuration</strong>: Use the following command to get detailed information about the current WinRM service configuration. This includes aspects such as authentication, encryption, and connection options:</p>
+<p><code>powershell
+winrm get winrm/config/Service</code></p>
+</li>
+<li>
+<p><strong>Verify Windows Remote Shell (WinRS) Configuration</strong>: This command provides information about the configuration of WinRS, the component that allows remote command execution. Check the timeouts and remote execution options:</p>
+<p><code>powershell
+winrm get winrm/config/Winrs</code></p>
+</li>
+<li>
+<p><strong>Verify Configured WinRM Listeners</strong>: Use the following command to show the listeners configured for WinRM, and ensure they are correctly configured with the expected ports and protocols:</p>
+<p><code>powershell
+winrm enumerate winrm/config/Listener</code></p>
+</li>
+</ol>
+<h2 id="inventory-file">Inventory File</h2>
+<p>To run Ansible on Windows from a Windows Subsystem for Linux (WSL) environment on Ubuntu, you first need to configure an inventory file. Begin by creating a file named <code>inventory</code> in the directory where you work with Ansible. This file specifies the necessary information to connect to the Windows machines.</p>
+<p>Inside this file, define a group of machines named <code>windows</code>, and in this case, add a machine named <code>windows10</code> with the IP address <code>X.X.X.X</code>. This IP address corresponds to the Windows machine where Ansible will be executed.</p>
+<p>The inventory file contains a section of variables for the <code>windows</code> group, configuring crucial details for the connection. These variables include:</p>
+<ol>
+<li>
+<p><strong>ansible_user and ansible_password</strong>: Specifies the username and password required to authenticate to the Windows machine. This allows Ansible to perform remote operations with the appropriate access rights.</p>
+<p><code>ini
+ansible_user: username
+ansible_password: password</code></p>
+</li>
+<li>
+<p><strong>ansible_port</strong>: Defines the port used for the WinRM connection. The default port for secure WinRM is 5986.</p>
+<p><code>ini
+ansible_port: 5986</code></p>
+</li>
+<li>
+<p><strong>ansible_connection</strong>: Specifies the type of connection. For WinRM, it is set to <code>winrm</code>.</p>
+<p><code>ini
+ansible_connection: winrm</code></p>
+</li>
+<li>
+<p><strong>ansible_winrm_transport</strong>: Configures the transport method for the WinRM connection. In this case, it is set to <code>basic</code>, which uses basic authentication.</p>
+<p><code>ini
+ansible_winrm_transport: basic</code></p>
+</li>
+<li>
+<p><strong>ansible_winrm_server_cert_validation</strong>: Defines server certificate validation. In this case, it is set to <code>ignore</code> to disable server certificate validation.</p>
+<p><code>ini
+ansible_winrm_server_cert_validation: ignore</code></p>
+</li>
+</ol>
+<h2 id="win_pingyml-file">win_ping.yml File</h2>
+<p>To verify that Ansible can run correctly on Windows machines from the WSL environment on Ubuntu, create and run a test playbook. This playbook will help confirm that the configuration of your inventory file is correct and that Ansible can communicate with the Windows machines as expected.</p>
+<p>First, create a file named <code>win_ping.yml</code>. This file is an Ansible playbook that contains instructions for Ansible to execute on the machines defined in the inventory file. The content of the <code>win_ping.yml</code> file is as follows:</p>
+<pre><code>---
+- name: win_ping module demo
+  hosts: windows
+  become: false
+  gather_facts: false
+  tasks:
+    - name: test connection
+      ansible.windows.win_ping:
+</code></pre>
+<h2 id="run-the-playbook">Run the Playbook</h2>
+<p>To verify that Ansible can communicate correctly with the Windows machines, execute the <code>win_ping.yml</code> playbook using the appropriate command. Run the following command in the WSL environment on Ubuntu:</p>
+<pre><code>ansible-playbook -i inventory win_ping.yml
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/marcSerrano2613"  target="_blank" rel="noopener">Marc Serrano</a>
+    
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
