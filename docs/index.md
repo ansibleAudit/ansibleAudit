@@ -20,12 +20,11 @@ To get started with ansibleAudit:
 
 If you need assistance or have questions, please refer to the following resources:
 
-- **[FAQ](faq.md):** Frequently asked questions and troubleshooting tips.
 - **[Community](https://github.com/ansibleAudit/ansibleAudit/issues):** Join discussions, ask questions, and get involved.
 
 ## **Contact**
 
-For further inquiries, you can reach us at [support@example.com](mailto:support@example.com).
+For further inquiries, you can reach us at [marcserrano2626@gmail.com](mailto:marcserrano2626@gmail.com).
 
 ## **License**
 

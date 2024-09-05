@@ -36,6 +36,8 @@ nav:
       - User Manual: user_manual/user_manual.md
       - Interpretation of the results: user_manual/results.md
       - Reports and Dashboards: user_manual/reports_and_dashboards.md
+   - Installation for Windows:
+      - Installation for Windows: user_manual/installation_win.md
    - Contributing Guide: 
       - Contributing Guide: contribution_guide/contributing.md
       - Find Vulnerabilities: contribution_guide/find_vulnerabilities.md
@@ -45,4 +47,3 @@ nav:
            - Scores: contribution_guide/scores.md
       - Test contributions: contribution_guide/test_playbooks.md
       - Create Pull Request: contribution_guide/create_pull_request.md
-   - Ansible Best Practices: ansible_best_practices.md

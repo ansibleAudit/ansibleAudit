@@ -3,7 +3,7 @@ This manual is designed for users who want to use the application to verify vuln
 
 ## **Prerequisites**:
 
-- Python 3.x or 2.x installed on the system
+- Python 3.10 installed on the system
 
 - Git installed
 
